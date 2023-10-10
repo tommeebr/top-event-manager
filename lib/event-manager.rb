@@ -1,16 +1,7 @@
 require 'csv'
 
 def clean_zipcode(zipcode)
-    if zipcode.nil?
-        zipcode = '00000'
-    elsif zipcode.length < 5
-        len = 5 - zipcode.length
-        zipcode = zipcode.prepend("0" * len)
-    elsif zipcode.length > 5
-        zipcode = zipcode.slice(0..4)
-    else
-        zipcode
-    end
+    zipcode.to_s.rjust(5, '0')[0..4]
 end
 
 puts 'Event Manager Initialised!'
