@@ -24,8 +24,8 @@ end
 #lines.each {|line| puts line}
 
 
-lines.each do |line|
-    next if line == " ,RegDate,first-Name,last_name,Email-Addeess,HomePhone,Street,City,State,Zipcode\n"
+lines.each_with_index do |line,index|
+    next if index == 0
     columns = line.split(",")
     name=columns[2]
     puts name
