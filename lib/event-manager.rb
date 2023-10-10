@@ -21,4 +21,10 @@ lines.each do |line|
 end
 =end
 
-lines.each {|line| puts line}
+#lines.each {|line| puts line}
+
+lines.each do |line|
+    columns = line.spit(",")
+    name=column[2]
+    puts name
+end
