@@ -4,7 +4,7 @@ puts 'Event Manager Initialised!'
 
 lines = File.readlines("event_attendees.csv")
 
-
+=begin
 lines.each do |line|
     columns = line.split(",")
     hash = {"ID"=>columns[0],
@@ -19,3 +19,6 @@ lines.each do |line|
         "Zipcode"=>columns[9]}
     puts hash
 end
+=end
+
+lines.each {|line| puts line}
