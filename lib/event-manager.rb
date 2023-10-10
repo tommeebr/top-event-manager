@@ -23,8 +23,12 @@ end
 
 #lines.each {|line| puts line}
 
+
 lines.each do |line|
-    columns = line.spit(",")
-    name=column[2]
+    next if line == " ,RegDate,first-Name,last_name,Email-Addeess,HomePhone,Street,City,State,Zipcode\n"
+    columns = line.split(",")
+    name=columns[2]
     puts name
 end
+
+
